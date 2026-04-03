@@ -1,0 +1,13 @@
+services:
+  continuwuity:
+    image: forgejo.ellis.link/continuwuation/continuwuity:latest
+    container_name: continuwuity
+    restart: unless-stopped
+    ports:
+      - "8008:8008"   # bind only to localhost; reverse proxy handles HTTPS
+    volumes:
+      - ./continuwuity.toml:/var/lib/continuwuity/continuwuity.toml:ro
+      - ./data:/var/lib/continuwuity
+    environment:
+      CONDUWUIT_CONFIG: "/var/lib/continuwuity/continuwuity.toml"
+      CONTINUWUITY_CONFIG: "/var/lib/continuwuity/continuwuity.toml"
