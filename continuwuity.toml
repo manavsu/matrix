@@ -39,7 +39,7 @@
 # example: "continuwuity.org"
 #
 
-server_name = "languidlabs.com"
+server_name = "clint.local"
 
 # The default address (IPv4 or IPv6) continuwuity will listen on.
 #
@@ -92,7 +92,7 @@ address = "0.0.0.0"
 #
 # example: "/var/lib/conduwuit"
 #
-database_path ="/var/lib/conduwuit"
+database_path = "/var/lib/conduwuit"
 
 # continuwuity supports online database backups using RocksDB's Backup
 # engine API. To use this, set a database backup path that continuwuity
