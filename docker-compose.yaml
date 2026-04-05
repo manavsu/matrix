@@ -9,3 +9,10 @@ services:
     environment:
       CONDUWUIT_CONFIG: "/var/lib/continuwuity/continuwuity.toml"
       CONTINUWUITY_CONFIG: "/var/lib/continuwuity/continuwuity.toml"
+    networks:
+      - reverse_proxy_network
+
+
+networks:
+  reverse_proxy_network:
+      external: true
